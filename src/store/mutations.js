@@ -2,6 +2,7 @@
 import {
   DATA,
   BANNER,
+  HOME
 } from './mutation-types';
 
 export default {
@@ -13,6 +14,11 @@ export default {
   //轮播图的数据
   [BANNER] (state,{banner}) {
     state.banner = banner;
+  },
+
+  //轮播图底下(HOME)的数据
+  [HOME] (state,{home}) {
+    state.home = home;
   },
 
 

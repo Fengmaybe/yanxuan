@@ -3,3 +3,4 @@
 //获取data变量
 export const DATA = 'data';
 export const BANNER = 'banner';
+export const HOME = 'home';
