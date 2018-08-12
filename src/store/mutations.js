@@ -1,23 +1,23 @@
 
 import {
-  DATA,
-  BANNER,
-  HOME
+  RECEIVE_DATA,
+  RECEIVE_BANNER,
+  RECEIVE_HOME
 } from './mutation-types';
 
 export default {
   //tab的数据
-  [DATA] (state,{data}) {
+  [RECEIVE_DATA] (state,{data}) {
     state.data = data;
   },
 
   //轮播图的数据
-  [BANNER] (state,{banner}) {
+  [RECEIVE_BANNER] (state,{banner}) {
     state.banner = banner;
   },
 
   //轮播图底下(HOME)的数据
-  [HOME] (state,{home}) {
+  [RECEIVE_HOME] (state,{home}) {
     state.home = home;
   },
 

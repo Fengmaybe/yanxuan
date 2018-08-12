@@ -1,6 +1,6 @@
 //一些常量的模块
 
 //获取data变量
-export const DATA = 'data';
-export const BANNER = 'banner';
-export const HOME = 'home';
+export const RECEIVE_DATA = 'data';
+export const RECEIVE_BANNER = 'banner';
+export const RECEIVE_HOME = 'home';
