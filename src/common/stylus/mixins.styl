@@ -7,6 +7,7 @@ $rem = 750/10rem;
 bottom-border-1px($color)
   position relative
   border none
+  z-index 5
   &:after
     content ''
     position absolute
@@ -20,6 +21,7 @@ bottom-border-1px($color)
 // 一像素上边框
 top-border-1px($color)
   position relative
+  z-index 5
   &::before
     content ''
     position absolute

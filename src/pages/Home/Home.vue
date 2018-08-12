@@ -1,6 +1,7 @@
 <template>
   <div id="scrollContainer">
     <div class="homeContainer">
+      <MaskLayer />
       <!--home的头部-->
       <div class="homeHeader">
         <!--logo+搜索框-->
@@ -103,7 +104,7 @@
         </div>
         <div class="topic_wrap">
           <div class="topic_content">
-            <span>专题精选</span>
+            <span>专题精选&nbsp;</span>
             <i class="iconfont icon-yuanjiantou1"></i>
           </div>
         </div>
@@ -143,6 +144,8 @@
           </span>
         </div>
       </div>
+      <!--组件：GoodThings-->
+      <HomeGoodThings :cateList="home.cateList"/>
     </div>
   </div>
 </template>
@@ -153,6 +156,9 @@
   import BScroll from 'better-scroll';
   import Swiper from 'swiper';
 
+  import HomeGoodThings from '../../components/HomeGoodThings/HomeGoodThings';
+  import MaskLayer from '../../components/MaskLayer/MaskLayer';
+
   export default {
     data() {
       return {
@@ -161,6 +167,10 @@
         min:"",
         sec:"",
       }
+    },
+    components: {
+      HomeGoodThings,
+      MaskLayer
     },
     mounted() {
       //获取数据(tab选项)
@@ -260,8 +270,6 @@
         //递归每秒调用countTime方法，显示动态时间效果
         setTimeout(this._countTime, 1000);
       }
-
-
     }
   }
 </script>
@@ -607,7 +615,8 @@
         .title
           font-size 20px
           color black
-          font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑', Arial, sans-serif;
+          font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
         .h_m_s
           padding 20px 0
           .hour, .min, .sec
