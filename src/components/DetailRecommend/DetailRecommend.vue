@@ -1,0 +1,273 @@
+<template>
+  <div>
+    <div class="detail_recommend_wrap" v-if="detail.recommendOne">
+      <!--part1 图片-->
+      <div class="container">
+        <div class="module-title">{{detail.recommendOne.nickname}}</div>
+        <div class="m-mainPosItem">
+          <div class="imgContainer">
+            <div class="topicTag">
+              <div class="m-exploreTag">{{detail.recommendOne.typeName}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--part2 文字信息-->
+      <div class="topicInfo">
+        <div class="line1">
+          <div class="title">{{detail.recommendOne.title}}</div>
+          <div class="price">
+            <div class="num">{{detail.recommendOne.priceInfo}}</div>
+            <div class="unit">元起</div>
+          </div>
+        </div>
+        <div class="line2">
+          <div class="subTitle" v-if="detail.recommendOne.subTitle">{{detail.recommendOne.subTitle}}</div>
+        </div>
+      </div>
+      <!--part 一个列表-->
+      <div class="m-minorPosItem" v-if="detail.recommendTwo">
+        <div class="topicInfo">
+          <div class="author-container">
+            <div class="author">
+              <div class="avatar">
+                <img :src="detail.recommendTwo.picUrl">
+              </div>
+              <div class="nickname">{{detail.recommendTwo.nickname}}</div>
+            </div>
+            <div class="line1">
+              <div class="title">{{detail.recommendTwo.title}}</div>
+            </div>
+            <div class="line2">
+              <div class="subTitle">{{detail.recommendTwo.subTitle}}</div>
+            </div>
+          </div>
+          <div class="minorPic">
+            <div class="imgContainer">
+              <img :src="detail.recommendTwo.avatar" alt="头像">
+              <div class="topicTag">
+
+                <div class="m-exploreTag">{{detail.recommendTwo.typeName}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--part 一个相同的列表-->
+      <div class="m-minorPosItem" v-if="detail.recommendThree">
+        <div class="topicInfo">
+          <div class="author-container">
+            <div class="author">
+              <div class="avatar">
+                <img :src="detail.recommendThree.avatar">
+              </div>
+              <div class="nickname">{{detail.recommendThree.nickname}}</div>
+            </div>
+            <div class="line1">
+              <div class="title">{{detail.recommendThree.title}}</div>
+            </div>
+            <div class="line2">
+              <div class="subTitle">{{detail.recommendThree.subTitle}}</div>
+            </div>
+          </div>
+          <div class="minorPic">
+            <div class="imgContainer">
+              <img :src="detail.recommendThree.picUrl" alt="">
+              <div class="topicTag">
+                <div class="m-exploreTag">{{detail.recommendThree.typeName}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    props:{
+      detail:Object
+    }
+  }
+</script>
+
+<style lang="stylus" rel="stylesheet/stylus">
+  .detail_recommend_wrap
+    padding: 16px 15px
+    margin-bottom: 20px
+    background-color: #fff
+    font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    .container
+      .module-title
+        text-align center
+        font-size 16px
+        padding 16px 0
+      .m-mainPosItem
+        display: block;
+        position: relative
+        color: #333
+        border: 1px solid #d9d9d9
+        border-radius: 5px 5px 0 0
+        overflow: hidden
+        .imgContainer
+          background-image: url(//yanxuan.nosdn.127.net/09d83c97c9963495e6518cfbec776b4c.jpg?imageView&quality=75);
+          background-size: cover
+          background-position: center
+          background-repeat: no-repeat
+          position: relative
+          height: 200px
+          border-radius: 5px
+          overflow: hidden
+          .topicTag
+            position: absolute
+            left: 10px
+            top 4px
+            .m-exploreTag
+              font-size: 12px
+              font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+              display: inline-block
+              padding: 0 6px
+              height: 18px
+              line-height: 18px;
+              background-color: rgba(255,255,255,.9);
+              border: 1px solid #d9d9d9;
+              border-radius: 9px;
+              color: #333;
+    .topicInfo
+      overflow: hidden;
+      position: relative;
+      background-color: #fff;
+      border 1px solid #eee
+      .line1
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        line-height: 1.2;
+        justify-content: space-between;
+        .title
+          margin-right: 12px;
+          font-size: 18px;
+          padding-left 2px
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        .price
+          margin-right: 12px;
+          font-size: 18px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          .num
+            float: left;
+            font-size: 18px;
+          .unit
+            float: left;
+            font-size: 18px;
+      .line2
+        .subTitle
+          position: relative;
+          font-size: 14px;
+          line-height: 1.2;
+          color: #7f7f7f;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          padding-bottom 20px
+          padding-top 10px
+          padding-left 2px
+    .m-minorPosItem
+      display: flex
+      background-color: #fff;
+      color: #333;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      margin-bottom: 15px
+      margin-top 15px
+      .topicInfo
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        padding-left: 8px
+        padding-right: 1px;
+        .author-container
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          overflow: hidden;
+          position: relative;
+          padding-left: 8px;
+          padding-right 20px
+          .author
+            height: 24px
+            font-size: 12px
+            display: flex;
+            align-items: center;
+            .avatar
+              width: 24px
+              height: 24px
+              margin-right: 10px;
+              border-radius: 50%;
+              img
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+          .nickname
+            color: #333;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          .line1
+            margin-bottom: 4px;
+            line-height: 1.2;
+            .title
+              margin-right: 15px;
+              font-size: 16px;
+              padding-top 4px
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+          .line2
+            .subTitle
+              overflow: hidden;
+              text-overflow: ellipsis;
+              position: relative;
+              font-size: 12px;
+              line-height: 1.5;
+              color: #7f7f7f;
+              white-space: normal;
+              height: 50px;
+        .minorPic
+          position: relative;
+          width: 140px
+          height: 140px
+          .imgContainer
+            width: 100%
+            height 100%
+            background-color #eee
+            //background-image: url(//yanxuan.nosdn.127.net/7af712a….jpg?imageView&quality=75);
+            img
+              width: 100%
+              background-position: center;
+              background-repeat: no-repeat;
+            .topicTag
+              position: absolute;
+              top: 4px;
+              left: 4px;
+              .m-exploreTag
+                font-size: 12px;
+                display: inline-block;
+                padding: 2px;
+                height: 14px;
+                line-height: 14px;
+                background-color: rgba(255,255,255,.9);
+                border: 1px solid #d9d9d9;
+                border-radius: 4px;
+                color: #333;
+
+</style>
+

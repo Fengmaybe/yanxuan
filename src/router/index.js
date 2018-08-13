@@ -51,7 +51,7 @@ export default new VueRouter({
       path: '/personal',
       component: Personal,
       meta:{
-        showFooterNav:true
+        showFooterNav:false
       }
     },
     {

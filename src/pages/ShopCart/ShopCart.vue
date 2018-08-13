@@ -1,6 +1,36 @@
 <template>
-  <div>
-    ShopCart
+  <div class="wrap">
+    <div class="header">
+      <span class="shopCart">购物车</span>
+      <span class="coupon">领券</span>
+    </div>
+    <div class="titleThree">
+      <div class="m-servicePolicy">
+        <div class="item">
+          <div class="servicePolicy"></div>
+          <span>30天无忧退货</span>
+        </div>
+        <div class="item">
+          <div class="servicePolicy"></div>
+          <span>48小时快速退款</span>
+        </div>
+        <div class="item">
+          <div class="servicePolicy"></div>
+          <span>满88元免邮费</span>
+        </div>
+      </div>
+      <div class="m-defaultPage">
+        <div class="container">
+          <div class="img"></div>
+          <div class="txt">
+            <div class="noCart-login">
+              <div class="noCart-title">去添加点什么吧</div>
+              <div class="noCart-btn" @click="$router.replace('/personal')">登录</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -9,5 +39,104 @@
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+  .wrap
+    .header
+      position: fixed
+      left: 0;
+      top: 0;
+      z-index: 10;
+      width: 100%;
+      height: 44px
+      background-color white
+      .shopCart
+        font-size 18px
+        color black
+        text-align center
+        line-height 44px
+        margin-left 164px
+      .coupon
+        font-size 14px
+        color: #b4282d
+        position absolute
+        right 15px
+        top 15px
+    .titleThree
+      .m-servicePolicy
+        width 90%
+        position: relative;
+        height: 78px;
+        padding: 0 10px;
+        z-index 1
+        background: #f4f4f4;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        .item
+          margin-top: 38px;
+          display: flex;
+          align-items: center;
+          font-size: 12px
+          color: #666
+          .servicePolicy
+            display: inline-block;
+            vertical-align: middle;
+            background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/servicePolicy-1d7541974f.png);
+            background-repeat: no-repeat;
+            width: 5px
+            height: 5px
+            margin-right 3px
+            background-size 100% 100%
+          span
+            font-size: 12px
+            line-height 14px
+            color: #666;
+      .m-defaultPage
+        position: fixed;
+        top: 44px
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        background-color: #f4f4f4;
+        text-align: center;
+        .container
+          position: absolute
+          top: -25px
+          right: 0
+          bottom: 0
+          left: 0
+          height: 150px
+          margin: auto
+          .img
+            background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noCart-a8fe3f12e5.png);
+            display: inline-block;
+            vertical-align: middle;
+            width: 124px
+            height: 124px
+            margin-bottom: 4px
+            background-size: 124px 124px
+            background-position: center center;
+            background-repeat: no-repeat;
+          .txt
+            font-size: 14px
+            line-height: 1;
+            color: #7f7f7f;
+            .noCart-login
+              margin-top: -12px
+              .noCart-title
+                margin-bottom: 25px
+                line-height: 1;
+                font-size: 14px
+                color: #999;
 
+              .noCart-btn
+                margin: auto
+                width: 240px
+                height: 46px
+                font-size: 16px
+                line-height: 46px
+                color: #fff
+                background-color: #b4282d
+                border-radius: 4px
 </style>

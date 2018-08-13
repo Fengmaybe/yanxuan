@@ -165,8 +165,6 @@
                 height: 18px
                 line-height: 18px
                 color: #333
-
-
             .price
               line-height: 1.5
               color: #333

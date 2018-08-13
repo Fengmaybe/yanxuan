@@ -577,7 +577,6 @@
           img
             width: 100%;
             margin-bottom: 4px
-
           .content
             height: 16px
             margin-bottom: 4px
@@ -591,7 +590,6 @@
               width: 200px
               float: left
               font-size: 14px
-
             span
               float: right;
               font-size: 14px

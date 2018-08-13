@@ -26,6 +26,7 @@
     height 44px
     box-sizing border-box
     padding 0 12px
+    border-bottom 1px solid lightgrey
   .bar
     position relative
     width 100%

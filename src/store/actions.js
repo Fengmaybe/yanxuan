@@ -9,7 +9,9 @@ import {
 import {
   RECEIVE_DATA,
   RECEIVE_BANNER,
-  RECEIVE_HOME
+  RECEIVE_HOME,
+  RECEIVE_DETAIL,
+  RECEIVE_NAV
 } from './mutation-types';
 
 export default {
@@ -33,11 +35,28 @@ export default {
 
   //获取Home的数据
   async getHome({commit},cb){
-    const result = await reqHome();
+    const result = await reqNav();
     if(result.code === 0){
       commit(RECEIVE_HOME,{home:result.home});
       cb && cb();
     }
-  }
+  },
 
+  //获取detail的数据
+  async getDetail({commit},cb){
+    const result = await reqDetail();
+    if(result.code === 0){
+      commit(RECEIVE_DETAIL,{detail:result.detail});
+      cb && cb();
+    }
+  },
+
+  //获取nav分类的数据
+  async getNav({commit},cb){
+    const result = await reqNav();
+    if(result.code === 0){
+      commit(RECEIVE_NAV,{nav:result.nav});
+      cb && cb();
+    }
+  }
 }
