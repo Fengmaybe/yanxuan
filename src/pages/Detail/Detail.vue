@@ -1,11 +1,16 @@
 <template>
   <div>
-    Detail
+    <DetailHeader />
   </div>
 </template>
 
 <script>
-  export default {}
+  import DetailHeader from '../../components/DetailHeader/DetailHeader';
+  export default {
+    components:{
+      DetailHeader
+    }
+  }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

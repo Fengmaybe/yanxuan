@@ -28,7 +28,9 @@
             <img :src="item.picUrl">
           </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
+
       <!--轮播底下的玩意tips-->
       <div class="tips">
         <div class="item" v-for="(item,index) in home.policyDescList" :key="index">
@@ -190,9 +192,17 @@
           new Swiper('.swiper-container', {
             effect: "fade",
             loop: true,
+            // 如果需要分页器
+            pagination: {
+              el: '.swiper-pagination',
+              //type: 'bullets',
+              //type: 'fraction',
+              //type : 'progressbar',
+              //type : 'custom',
+            },
             autoplay: {
               autoplay: true,
-              delay: 2000
+              delay: 3000
             },
           })
         })
