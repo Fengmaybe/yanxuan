@@ -5,11 +5,11 @@
       <img src="http://yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="">
     </div>
     <div class="loginWarp">
-    <div class="phoneLogin">
+    <div class="phoneLogin" @click="$router.replace('/loginphone')">
       <i class="phoneIcon"></i>
       <span>手机帐号登录</span>
     </div>
-    <div class="msgLogin">
+    <div class="msgLogin" @click="$router.replace('/loginemail')">
       <i class="msgIcon"></i>
       <span>邮箱帐号登录</span>
     </div>
@@ -46,10 +46,11 @@
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   .MainWrap
     background-color #F2F5F4
     height 100%
+    overflow hidden
   .logo
     margin-top 44px
     width 100%
@@ -118,7 +119,7 @@
 
   .contact
     background-color #F2F5F4
-    height 268px
+    height 68px
     width 100%
     position relative
   .contactWrap

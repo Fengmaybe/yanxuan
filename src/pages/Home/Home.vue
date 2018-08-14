@@ -30,7 +30,6 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-
       <!--轮播底下的玩意tips-->
       <div class="tips">
         <div class="item" v-for="(item,index) in home.policyDescList" :key="index">
@@ -148,7 +147,9 @@
       </div>
       <!--组件：GoodThings-->
       <HomeGoodThings :cateList="home.cateList"/>
-    </div>
+      <goTop />
+      </div>
+
   </div>
 </template>
 
@@ -160,6 +161,7 @@
 
   import HomeGoodThings from '../../components/HomeGoodThings/HomeGoodThings';
   import MaskLayer from '../../components/MaskLayer/MaskLayer';
+  import goTop from '../../components/goTop/goTop';
 
   export default {
     data() {
@@ -172,7 +174,8 @@
     },
     components: {
       HomeGoodThings,
-      MaskLayer
+      MaskLayer,
+      goTop
     },
     mounted() {
       //获取数据(tab选项)
@@ -206,7 +209,7 @@
             },
           })
         })
-      })
+      });
 
       //获取home的数据
       this.$store.dispatch('getHome', () => {
@@ -223,6 +226,7 @@
     methods: {
       //滚动(tab列表滚，新品首发滚)
       _initScorllTabAndNew() {
+
         new BScroll('.hdScorllTab', {
           click: true,
           scrollX: true
@@ -238,6 +242,7 @@
           click: true,
           scrollX: true
         });
+
       },
       //tab点选
       selectIndex(index) {
@@ -284,7 +289,7 @@
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../common/stylus/mixins.styl"
 
   #scrollContainer

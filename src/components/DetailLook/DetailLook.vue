@@ -19,6 +19,7 @@
 </template>
 
 <script>
+
   export default {}
 </script>
 
@@ -43,6 +44,7 @@
       height 110px
       width 100%
       padding 12px 15px 23px
+      box-sizing border-box
       .comment_top
         margin-bottom  10px
         img

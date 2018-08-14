@@ -35,7 +35,7 @@ export default {
 
   //获取Home的数据
   async getHome({commit},cb){
-    const result = await reqNav();
+    const result = await reqHome();
     if(result.code === 0){
       commit(RECEIVE_HOME,{home:result.home});
       cb && cb();

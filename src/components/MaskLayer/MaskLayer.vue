@@ -60,7 +60,7 @@
     }
   }
 </script>
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   .fade-enter-active,.fade-leave-active
     transition opacity .6s
   .fade-enter,.fade-leave-to

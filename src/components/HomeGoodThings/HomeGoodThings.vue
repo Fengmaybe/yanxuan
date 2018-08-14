@@ -7,7 +7,7 @@
         <div class="home-goodThings">
           <!--遍历第二层是单个好物的列表商品-->
           <div class="goodThingsWrap" v-for="(good, indexGood) in item.itemList" :key="indexGood">
-            <img :src="good.listPicUrl" alt="goodItem">
+            <img v-lazy="good.listPicUrl" alt="goodItem">
             <div class="desc">{{good.simpleDesc}}</div>
             <div class="name">{{good.name}}</div>
             <span class="price">￥{{good.couponPrice}}</span>

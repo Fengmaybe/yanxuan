@@ -11,7 +11,7 @@
         <div class="list">
           <div class="cateItem" v-for="(subItem,subIndex) in data[currentIndex].subCateList" :key="subIndex">
             <div class="itemDiv">
-              <img :src="subItem.bannerUrl" alt="item">
+              <img :src="subItem.wapBannerUrl" alt="item">
               <div class="name">{{subItem.name}}</div>
             </div>
           </div>
@@ -83,7 +83,7 @@
           margin-bottom: 50px;
           width: 72px
           height: 72px
-          margin-right: 16px
+          margin-right: 12px
           .itemDiv
             img
               display: block;

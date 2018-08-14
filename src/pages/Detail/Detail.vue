@@ -7,6 +7,7 @@
     <DetailLook />
     <DetailQuarterTen :tenfifteen="detail.tenfifteen"/>
     <DetailFindMore :findMore="detail.findMore"/>
+    <goTop />
 
   </div>
 </template>
@@ -21,6 +22,7 @@
   import DetailLook from '../../components/DetailLook/DetailLook';
   import DetailQuarterTen from '../../components/DetailQuarterTen/DetailQuarterTen';
   import DetailFindMore from '../../components/DetailFindMore/DetailFindMore';
+  import goTop from '../../components/goTop/goTop';
 
   export default {
     computed:{
@@ -36,7 +38,8 @@
       DetailRecommend,
       DetailLook,
       DetailQuarterTen,
-      DetailFindMore
+      DetailFindMore,
+      goTop
     }
   }
 </script>

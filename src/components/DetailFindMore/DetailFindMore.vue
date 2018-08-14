@@ -6,7 +6,7 @@
     <div class="wrap" v-for="(item,index) in findMore" :key="index">
       <div class="box">
         <div class="imgBox">
-          <img :src="item.itemPicUrl" alt="photo">
+          <img v-lazy="item.itemPicUrl" alt="photo">
         </div>
         <div class="text">{{item.title}}</div>
       </div>

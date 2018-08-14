@@ -35,11 +35,18 @@
 </template>
 
 <script>
-  export default {}
+  import goTop from '../../components/goTop/goTop';
+  export default {
+    components:{
+      goTop
+    }
+  }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   .wrap
+    overflow hidden
+    display relative
     .header
       position: fixed
       left: 0;
@@ -61,19 +68,29 @@
         right 15px
         top 15px
     .titleThree
+      position relative
+      width 100%
+      height 120px
       .m-servicePolicy
         width 90%
-        position: relative;
-        height: 78px;
+        position: absolute;
+        left: 0
+        right: 0
+        bottom: 0
+        top: 6px
+        margin auto
+        box-sizing: border-box;
+        height: 38px;
+        font-size 12px
+        line-height 12px
         padding: 0 10px;
-        z-index 1
+        z-index 100
         background: #f4f4f4;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
         justify-content: space-between;
         .item
-          margin-top: 38px;
           display: flex;
           align-items: center;
           font-size: 12px
