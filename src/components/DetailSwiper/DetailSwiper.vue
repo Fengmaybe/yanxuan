@@ -33,9 +33,9 @@
     //   banner:[]
     //   }
     // },
-    //机智如你！！！哈哈哈哈哈哈哈啊啊啊，好开心！！！！！
+    //此法蛮机智
     computed:{
-    //  ...mapState(['detail'])
+      //  ...mapState(['detail'])
       banner () {
         return (this.$store.state.detail.banner || [])
       }

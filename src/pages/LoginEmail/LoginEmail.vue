@@ -20,7 +20,7 @@
               </div>
             </section>
             <section class="login_message">
-              <input type="text" maxlength="11" placeholder="验证码" v-model="captcha" autocomplete="off">
+              <input type="text" maxlength="4" placeholder="验证码" v-model="captcha" autocomplete="off">
               <img class="get_verification" src="./images/captcha.svg" alt="captcha"
                     style="width: 150px ; margin-top: 5px;right: 20px">
             </section>
@@ -159,7 +159,7 @@
             -webkit-text-fill-color: #666
           .get_verification
             position absolute
-            top 51%
+            top 46%
             right 60px
             transform translateY(-50%)
             border 0
@@ -197,10 +197,10 @@
             letter-spacing: normal;
             outline: none;
           &:-webkit-autofill
-            -webkit-box-shadow:0 0 0 1000px white inset !important
+            -webkit-box-shadow:0 0 0 10000px white inset !important
             -webkit-text-fill-color: #666;
           &:-webkit-autofill:focus
-            -webkit-box-shadow:0 0 0 1000px white inset !important
+            -webkit-box-shadow:0 0 0 10000px white inset !important
             -webkit-text-fill-color: #666
           .switch_button
             font-size 12px

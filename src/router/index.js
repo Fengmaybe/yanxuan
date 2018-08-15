@@ -28,17 +28,24 @@ export default new VueRouter({
   routes: [
     {
       path: '/loginemail',
-      component: LoginEmail
+      component: LoginEmail,
+      meta:{
+        title:'网易严选-邮箱登录'
+      }
     },
     {
       path: '/loginphone',
-      component: LoginPhone
+      component: LoginPhone,
+      meta:{
+        title:'网易严选-手机登录'
+      }
     },
     {
       path: '/home',
       component: Home,
       meta:{
-        showFooterNav:true
+        showFooterNav:true,
+        title:'网易严选 - 以严谨的态度，为中国消费者甄选天下优品',
       }
 
     },
@@ -46,7 +53,8 @@ export default new VueRouter({
       path: '/detail',
       component: Detail,
       meta:{
-        showFooterNav:true
+        showFooterNav:true,
+        title:'网易严选 - 发现识物',
       }
 
     },
@@ -54,21 +62,24 @@ export default new VueRouter({
       path: '/category',
       component: Category,
       meta:{
-        showFooterNav:true
+        showFooterNav:true,
+        title:'网易严选 - 分类介绍',
       }
     },
     {
       path: '/shopcart',
       component: ShopCart,
       meta:{
-        showFooterNav:true
+        showFooterNav:true,
+        title:'网易严选 - 购物车',
       }
     },
     {
       path: '/personal',
       component: Personal,
       meta:{
-        showFooterNav:false
+        showFooterNav:false,
+        title:'网易严选 - 个人中心',
       }
     },
     {
